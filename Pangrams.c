@@ -11,3 +11,13 @@ char* pangrams(char* s) {
             freq[s[i] - 'a'] = 1;
         }
     }
+    for(int i=0; i<26; i++){
+        sum += freq[i];
+    }
+    if(sum == 26){
+        return "pangram";
+    } else {
+        return "not pangram";
+    }
+    
+}
