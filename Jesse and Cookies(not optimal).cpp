@@ -1,9 +1,7 @@
 int cookies(int k, vector<int> A) {
     int count =0;
     int n = A.size();
-    
-    //sort(A.begin(),A.end());
-    
+    sort(A.begin(),A.end());
     
     while((A.size()>=2)&&(A[0]<k)){
         
@@ -13,12 +11,11 @@ int cookies(int k, vector<int> A) {
             A.erase(A.begin());
             A.insert(A.begin(),x);
             count++; 
-    
             sort(A.begin(),A.end());
+        
         if(A[0]>=k){
             break;
-        }
-        
+        }    
     }
     if(A[0]<k){
         return -1;
